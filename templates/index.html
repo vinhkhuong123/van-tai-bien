@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tra cứu cước vận chuyển</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">OCEAN FREIGHT · 2026</p>
+        <h1>TRA CỨU CƯỚC VẬN CHUYỂN</h1>
+        <p class="lead">Thông tin tuyến, lịch trình và giá cước trong một nơi.</p>
+        <p class="sub">So sánh tuyến vận chuyển và lựa chọn phương án phù hợp.</p>
+        <div class="hero-chips">
+          <span class="hero-chip">🌐 Tuyến toàn cầu</span>
+          <span class="hero-chip">⚡ So sánh tức thì</span>
+          <span class="hero-chip">🗓️ Cập nhật 2026</span>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <svg class="hero-illo" viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-label="Tàu container chở hàng trên biển">
+          <defs>
+            <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e0f2fe"/>
+              <stop offset="1" stop-color="#bae6fd"/>
+            </linearGradient>
+            <linearGradient id="seaG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#38bdf8"/>
+              <stop offset="1" stop-color="#0284c7"/>
+            </linearGradient>
+            <linearGradient id="hullG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1e3a8a"/>
+              <stop offset="1" stop-color="#0c2a63"/>
+            </linearGradient>
+            <radialGradient id="sunG" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#fef08a"/>
+              <stop offset="1" stop-color="#fbbf24"/>
+            </radialGradient>
+          </defs>
+
+          <!-- sky -->
+          <rect x="0" y="0" width="560" height="400" rx="26" fill="url(#skyG)"/>
+          <!-- sun -->
+          <circle cx="452" cy="92" r="46" fill="url(#sunG)"/>
+          <!-- clouds -->
+          <g fill="#ffffff">
+            <ellipse cx="118" cy="82" rx="46" ry="22"/>
+            <ellipse cx="158" cy="72" rx="34" ry="20"/>
+            <ellipse cx="86" cy="72" rx="30" ry="18"/>
+          </g>
+          <g fill="#ffffff" opacity=".85">
+            <ellipse cx="372" cy="150" rx="38" ry="17"/>
+            <ellipse cx="400" cy="143" rx="26" ry="14"/>
+          </g>
+
+          <!-- sea -->
+          <path d="M0 262 Q140 242 280 262 T560 262 L560 400 L0 400 Z" fill="url(#seaG)"/>
+          <path d="M0 292 Q140 274 280 292 T560 292 L560 400 L0 400 Z" fill="#0ea5e9" opacity=".55"/>
+          <g stroke="#e0f2fe" stroke-width="4" stroke-linecap="round" opacity=".75">
+            <line x1="56" y1="336" x2="108" y2="336"/>
+            <line x1="150" y1="360" x2="214" y2="360"/>
+            <line x1="420" y1="344" x2="476" y2="344"/>
+          </g>
+
+          <!-- ship -->
+          <g>
+            <!-- hull with bow -->
+            <path d="M150 250 L424 250 L456 276 L412 304 L186 304 Z" fill="url(#hullG)"/>
+            <path d="M186 304 L412 304 L402 320 L196 320 Z" fill="#ef4444"/>
+            <rect x="150" y="244" width="274" height="10" rx="3" fill="#0ea5e9"/>
+            <!-- containers row 1 -->
+            <g stroke="#0b2b4a" stroke-width="1.5">
+              <rect x="166" y="208" width="44" height="38" fill="#f97316"/>
+              <rect x="212" y="208" width="44" height="38" fill="#22c55e"/>
+              <rect x="258" y="208" width="44" height="38" fill="#eab308"/>
+              <rect x="304" y="208" width="44" height="38" fill="#ef4444"/>
+              <rect x="350" y="208" width="44" height="38" fill="#38bdf8"/>
+            </g>
+            <!-- containers row 2 -->
+            <g stroke="#0b2b4a" stroke-width="1.5">
+              <rect x="189" y="172" width="44" height="38" fill="#38bdf8"/>
+              <rect x="235" y="172" width="44" height="38" fill="#f97316"/>
+              <rect x="281" y="172" width="44" height="38" fill="#22c55e"/>
+              <rect x="327" y="172" width="44" height="38" fill="#eab308"/>
+            </g>
+            <!-- containers row 3 -->
+            <g stroke="#0b2b4a" stroke-width="1.5">
+              <rect x="235" y="136" width="44" height="38" fill="#ef4444"/>
+              <rect x="281" y="136" width="44" height="38" fill="#38bdf8"/>
+            </g>
+            <!-- cabin -->
+            <rect x="150" y="196" width="34" height="50" rx="4" fill="#ffffff"/>
+            <g fill="#0ea5e9">
+              <rect x="156" y="204" width="9" height="9"/><rect x="169" y="204" width="9" height="9"/>
+              <rect x="156" y="218" width="9" height="9"/><rect x="169" y="218" width="9" height="9"/>
+            </g>
+            <!-- funnel -->
+            <rect x="158" y="174" width="16" height="22" rx="3" fill="#1e3a8a"/>
+            <rect x="158" y="174" width="16" height="7" fill="#ef4444"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- TABS -->
+  <nav class="tabs-bar">
+    <div class="container tabs">
+      {% for t in tabs %}
+        <a href="{{ url_for('index', tab=t.id) }}"
+           class="tab {% if t.id == current_tab %}is-active{% endif %}">
+          {{ t.label }}
+          {% if not t.ready %}<span class="soon">Sắp có</span>{% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </nav>
+
+  <main class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+   {% if current_tab == 'cuoc_xuat_khau' %}
+    <!-- IMPORT -->
+    <section class="panel import-bar">
+      <form action="{{ url_for('import_csv') }}" method="post" enctype="multipart/form-data">
+        <div class="import-left">
+          <span class="import-title">Nhập dữ liệu</span>
+          {% if source_name %}
+            <span class="chip">{{ source_name }} · {{ total }} dòng</span>
+          {% endif %}
+        </div>
+        <div class="import-right">
+          <input type="file" name="csv_file" accept=".csv" required />
+          <button type="submit" class="btn btn-ghost">Tải lên</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- BỘ LỌC TRA CỨU -->
+    <section class="panel">
+      <h2 class="panel-title">Bộ lọc tra cứu</h2>
+      <form class="filter-form" action="{{ url_for('index') }}" method="get">
+        <input type="hidden" name="tab" value="cuoc_xuat_khau" />
+        <div class="filter-grid">
+          {% for f in filter_fields %}
+            <label class="field">
+              <span>{{ f.label }}</span>
+              <select name="{{ f.id }}">
+                <option value="">— Tất cả —</option>
+                {% for opt in options[f.id] %}
+                  <option value="{{ opt }}" {% if criteria[f.id] == opt %}selected{% endif %}>{{ opt }}</option>
+                {% endfor %}
+              </select>
+            </label>
+          {% endfor %}
+        </div>
+        <div class="filter-actions">
+          <button type="submit" class="btn btn-primary">Tra cứu giá</button>
+          <a href="{{ url_for('index', tab='cuoc_xuat_khau') }}" class="btn btn-outline">Xóa bộ lọc</a>
+        </div>
+      </form>
+    </section>
+
+    <!-- KẾT QUẢ -->
+    <section class="panel">
+      <div class="results-head">
+        <h2 class="panel-title">Kết quả tra cứu</h2>
+        <span class="count">{{ results|length }} / {{ total }} tuyến</span>
+      </div>
+      <p class="caption">Dữ liệu minh họa phục vụ tra cứu và so sánh giao diện.</p>
+
+      {% if results %}
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              {% for col in columns %}
+                <th{% if col == 'gia_tham_khao' %} class="price"{% endif %}>{{ display_headers.get(col, col|upper) }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in results %}
+              <tr>
+                {% for col in columns %}
+                  <td{% if col == 'gia_tham_khao' %} class="price"{% endif %}>{{ row[col] }}</td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+        <p class="empty">
+          {% if total == 0 %}Chưa có dữ liệu. Hãy import một file CSV.
+          {% else %}Không tìm thấy kết quả phù hợp. Hãy thử thay đổi bộ lọc.{% endif %}
+        </p>
+      {% endif %}
+    </section>
+
+   {% else %}
+    <!-- TAB CHƯA CÓ CHỨC NĂNG -->
+    {% for t in tabs %}
+      {% if t.id == current_tab %}
+      <section class="panel placeholder">
+        <div class="placeholder-icon">🧭</div>
+        <h2 class="panel-title">{{ t.label }}</h2>
+        <p class="placeholder-text">Tính năng <strong>{{ t.label }}</strong> đang được phát triển.</p>
+        <p class="placeholder-sub">Khu vực này đã được bố trí sẵn trong giao diện và sẽ được cập nhật chức năng sau.</p>
+        <a href="{{ url_for('index', tab='cuoc_xuat_khau') }}" class="btn btn-outline">← Quay lại Cước xuất khẩu</a>
+      </section>
+      {% endif %}
+    {% endfor %}
+   {% endif %}
+  </main>
+
+  <footer class="container">
+    <p>Ocean Freight · Demo tra cứu cước vận chuyển · Python + Flask</p>
+  </footer>
+</body>
+</html>
